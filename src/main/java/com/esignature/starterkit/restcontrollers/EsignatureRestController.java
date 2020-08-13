@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.esignature.starterkit.generics.GenericObject;
 
 @RestController
-public class EsignatureController {
+public class EsignatureRestController {
 
 	@RequestMapping("/")
 	public String printingStarterKit() {
