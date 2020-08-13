@@ -1,16 +1,16 @@
 package com.esignature.starterkit.generics;
 
-public class GenereicObejct {
+public class GenericObject {
 
 	private String name;
 	private String lastname;
 	private String requestSignature;
 
-	public GenereicObejct() {
+	public GenericObject() {
 
 	}
 
-	public GenereicObejct(String name, String lastname, String requestSignature) {
+	public GenericObject(String name, String lastname, String requestSignature) {
 		super();
 		this.name = name;
 		this.lastname = lastname;
@@ -33,9 +33,18 @@ public class GenereicObejct {
 		this.lastname = lastname;
 	}
 
+	public String getRequestSignature() {
+		return requestSignature;
+	}
+
+	public void setRequestSignature(String requestSignature) {
+		this.requestSignature = requestSignature;
+	}
+
 	@Override
 	public String toString() {
-		return "GenereicObejct [name=" + name + ", lastname=" + lastname + "]";
+		return "GenericObject [name=" + name + ", lastname=" + lastname + ", requestSignature=" + requestSignature
+				+ "]";
 	}
 
 }
