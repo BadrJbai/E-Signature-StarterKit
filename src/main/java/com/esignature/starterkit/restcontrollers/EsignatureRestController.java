@@ -23,7 +23,7 @@ public class EsignatureRestController {
 	}
 
 	@PostMapping("/v1/generic")
-	public String createGenerecObject() {
+	public String createGenericObject() {
 		return "Just submitted a new record";
 	}
 
