@@ -5,9 +5,6 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public interface HashingServiceI {
 
 	public static String hashMyEsignature(byte[] requestSignature) throws NoSuchAlgorithmException, IOException {
