@@ -52,8 +52,24 @@
 			<artifactId>spring-boot-configuration-processor</artifactId>
 		</dependency>
 		
-		
+		<!-- Addded dss-utils-apache-commons  -->
+		<dependency>
+		    <groupId>org.digidoc4j.dss</groupId>
+		    <artifactId>dss-utils-apache-commons</artifactId>
+		    <version>5.5.d4j.1</version>
+		    <scope>test</scope>
+		</dependency>		
+
 	</dependencies>
+		
+		<!-- Added the Dss library dependency from the official documentation -->
+		<repositories>
+			<repository>
+			  <id>cefdigital</id>
+		  	  <name>cefdigital</name>
+		  	  <url>https://ec.europa.eu/cefdigital/artifact/content/repositories/esignaturedss/</url>
+			</repository>
+		</repositories>
 
 	<build>
 		<plugins>
@@ -62,8 +78,6 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-		
-
 	</build>
 
 </project>

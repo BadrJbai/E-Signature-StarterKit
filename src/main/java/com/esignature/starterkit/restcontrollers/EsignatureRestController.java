@@ -1,16 +1,18 @@
 package com.esignature.starterkit.restcontrollers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.esignature.starterkit.generics.GenericObject;
+import com.esignature.starterkit.hashing.HashingServiceI;
 
 @RestController
 public class EsignatureRestController {
 
-	// @Autowired
-	// HashingServiceI myHashService;
+	@Autowired
+	HashingServiceI myHashService;
 
 	@GetMapping("/")
 	public String printingStarterKit() {
@@ -19,7 +21,8 @@ public class EsignatureRestController {
 
 	@GetMapping("/v1/generic")
 	public GenericObject getGenericObject() {
-		return new GenericObject("foo", "baar", "EsignatureHashed");
+		String resultFromInterface = myHashService.getMessageFrominterface("Fucking nuts");
+		return new GenericObject("foo", resultFromInterface, "EsignatureHashed");
 	}
 
 	@PostMapping("/v1/generic")
