@@ -21,7 +21,7 @@ public class EsignatureRestController {
 
 	@GetMapping("/v1/generic")
 	public GenericObject getGenericObject() {
-		String resultFromInterface = myHashService.getMessageFrominterface("Fucking nuts");
+		String resultFromInterface = myHashService.getMessageFrominterface("This is My messagge");
 		return new GenericObject("foo", resultFromInterface, "EsignatureHashed");
 	}
 

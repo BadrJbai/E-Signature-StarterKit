@@ -10,6 +10,6 @@ public interface HashingServiceI {
 	public String hashMyEsignature(byte[] requestSignature) throws NoSuchAlgorithmException, IOException;
 
 	@Bean
-	public String getMessageFrominterface(String myString);
+	public <T> T getMessageFrominterface(String myMessage);
 
 }

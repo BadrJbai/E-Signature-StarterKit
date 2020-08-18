@@ -65,9 +65,10 @@ public class GenericObject implements HashingServiceI {
 
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
-	public String getMessageFrominterface(String myString) {
-		return "MyMessage Has been received from Controler";
+	public <T> T getMessageFrominterface(String myMessage) {
+		return (T) "Simpsons Are now Happy";
 	}
 
 }
